@@ -1,0 +1,11 @@
+# Ignore environment files
+backend/.env
+
+# Ignore Node.js modules (if applicable)
+frontend/node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore Python cache files (if applicable)
+**/__pycache__/
