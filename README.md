@@ -23,10 +23,34 @@ This application integrates:
 ### Prerequisites  
 
 - **Backend**: Python 3.8 or above  
-- **Frontend**: Node.js and npm  
+- **Frontend**: Node.js 
 - **Database**: MongoDB  
 - **Email Service Provider**: Amazon SES account with API credentials  
 - **LLM Integration**: Llama 3.2 API key from OpenRouter  
+
+---
+
+### Configuring Amazon SES  
+
+1. Sign in to the [Amazon SES Console](https://console.aws.amazon.com/ses/).  
+2. Verify your sender email addresses or domains.  
+3. Obtain your **Access Key** and **Secret Key** from the **IAM Console**.  
+4. Update `.env` with the credentials:  
+   ```bash
+   AWS_ACCESS_KEY_ID = "your-aws-ses-access-key"
+   AWS_SECRET_ACCESS_KEY = "your-aws-ses-secret-key"
+   AWS_REGION="your-aws-region"
+   SENDER_EMAIL="verified-aws-ses-email"
+   ```
+
+---
+### Configuring Llama 3.2 API Integration  
+
+1. Sign up at [OpenRouter](https://openrouter.ai/) and obtain your API key.  
+2. Include the API key in `.env`:  
+   ```bash
+   OPENROUTER_API_KEY = "your-openrouter-api-key"
+   ```
 
 ---
 
@@ -80,30 +104,6 @@ This application integrates:
    npm start  
    ```  
 
----
-
-### Configuring Amazon SES  
-
-1. Sign in to the [Amazon SES Console](https://console.aws.amazon.com/ses/).  
-2. Verify your sender email addresses or domains.  
-3. Obtain your **Access Key** and **Secret Key** from the **IAM Console**.  
-4. Update `.env` with the credentials:  
-   ```bash
-   AWS_ACCESS_KEY_ID = "your-aws-ses-access-key"
-   AWS_SECRET_ACCESS_KEY = "your-aws-ses-secret-key"
-   AWS_REGION="your-aws-region"
-   SENDER_EMAIL="verified-aws-ses-email"
-   ```
-
----
-
-### Configuring Llama 3.2 API Integration  
-
-1. Sign up at [OpenRouter](https://openrouter.ai/) and obtain your API key.  
-2. Include the API key in `.env`:  
-   ```bash
-   OPENROUTER_API_KEY = "your-openrouter-api-key"
-   ```
 
 ---
 
